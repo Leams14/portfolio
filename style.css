@@ -75,3 +75,47 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color:hsl(29, 100%, 50%);;
 }
+
+/* ABOUT-ME SECTION */
+#about-me{
+    padding: 80px 0;
+    color: hsl(29, 100%, 60%);
+}
+
+.about-col-1 img{
+    width: 500px;
+    height:auto;
+    margin: 0 auto;
+    border-radius: 3%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-2{
+    flex-basis: 63%;
+}
+
+.subtitle{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.about-col-2 p{
+    color:#fff;
+}
+
+/* EXPERIENCE SECTION */
+
+
+
+/* PROJECTS SECTION */
+
+
+
