@@ -84,7 +84,7 @@ nav ul li a:hover::after{
     color: hsl(29, 100%, 60%);
 }
 
-/* TO BE CHECKED 
+/* ---- TO BE CHECKED ----
 #about-me::after{
     content: "";
     width: 0;
