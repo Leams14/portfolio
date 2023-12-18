@@ -12,14 +12,15 @@
     <div id="header">
         <div class="menu">
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                        
+                    <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>    
                 </ul>
+                <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>
             </nav>
     
             <div class="header-text">
@@ -38,7 +39,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">
-                        About Me:
+                        About Me
                     </h1>
                     <p>
                         My name is Ismael Sedano Aguilera but everyone knows me as <i>Isma</i>, 
@@ -57,7 +58,7 @@
 <div id="experience">
     <div class="menu">
         <h1 class="subtitle">
-            Experience:
+            Experience
         </h1>
         <div class="experience-list">
         </div>
@@ -68,7 +69,7 @@
 <div id="projects">
     <div class="menu">
         <h1 class="subtitle">
-            Projects:
+            Projects
         </h1>
         <div class="projects-list">
             <!-- Project 1 -->
@@ -110,7 +111,7 @@
         <!-- BELOW, TO BE EDITED --> 
         <!--<a href="#" class="bttn">See more</a> -->
     </div> 
-    
+</div>    
 <!--____CONTACT SECTION____-->
 <div id="contact">
     <div class ="menu">
@@ -118,13 +119,52 @@
             <div class="contac-left">
                 <h1 class="subtitle"> Contact Me </h1>
                     <div class="social-icons">
-                        <a href=""> <i class="fa-regular fa-envelope"></i></a>
-                        <a href="www.linkedin.com/in/ismaelsedano"> <i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/ismaelsedano"> <i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/Leams14"> <i class="fa-brands fa-github"></i></a>
                     </div>
+                    <a href="assets/Ismael Sedano_CV.pdf" download class="download">Download CV</a>
+                </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="10" placeholder="Type your message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
             </div>
-            <div class="contact-right"></div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Made by Ismael Sedano Aguilera</p>
     </div>
 </div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-150px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzaIVL2cVUBEn70nY2vN46pzyX_qffwUMmFCzmwiQJ3LiqKXHSXfJpNEDx3A_FKhDll/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 </body>
 </html>
