@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #080808;
     color: #fff;
@@ -137,7 +141,7 @@ nav ul li a:hover::after{
 
 #projects{
     padding: 80px 0;
-    color: hsl(29, 100%, 60%);
+    color: #ff9633;
 
 }
 .projects-list{
@@ -227,3 +231,155 @@ nav ul li a:hover::after{
     background:#f8a659;
 }
 */
+
+
+/* CONTACT SECTION */
+
+/* ----- LEFT SITE SECTION -----*/
+.contact-left{
+   flex-basis: 35%; 
+}
+
+.social-icons{
+    margin-top: 13px;
+    text-align: center;
+    
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 50px;
+    margin-right: 15 px;
+    color:#ff9633;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+  color:#fff;
+  transform:translateY(-5px);  
+}
+
+.download{
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #f8a659;    
+}
+
+
+/* ----- RIGHT SITE SECTION -----*/
+.contact-right{
+   flex-basis: 65%; 
+}
+
+.contact-right form{
+    width:100%;
+    margin-top: 70px;
+
+}
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background:#4e4e4e;
+    padding:15px;
+    margin:8px 0;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/*
+form bttn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px; 
+    cursor: pointer;
+}
+*/
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding:15px 0;
+    background:#4e4e4e;
+    font-weight:100;
+    margin-top: 20px;
+
+}
+
+/* MEDIA SECTION */
+nav .fa{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size:30px;
+
+    }
+
+    nav .fa-bars{
+        display: block;
+        font-size: 25px;
+       
+    }
+
+    nav ul{
+        background: #ff9633;
+        position: fixed;
+        top: 0;
+        right: -150px;
+        width: 150px;
+        height: auto;
+        padding-top:50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+
+    nav ul .fa-bars{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer; 
+    }
+
+    .subtitle{
+        font-size:40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis:100%;
+    }
+    .about-col-1{
+        margin-bottom:30px;
+    }
+    .about-col-2{
+        font-size:16px;
+    }
+    .about-col-2 p{
+        margin-top: 15px;
+        font-size:16px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis:100%;
+    }
+}
+
+#msg{
+    color:#fff;
+    margin-top: 40px;
+    display:block;
+}
