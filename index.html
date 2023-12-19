@@ -21,6 +21,10 @@
                     <i class="fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>    
                 </ul>
                 <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>
+                <button class="switch" id="switch">
+                    <span><i class="fa-regular fa-sun"></i></span>
+                    <span><i class="fa-regular fa-moon" style= "color: #ffffff;"></i></span>
+                </button>
             </nav>
     
             <div class="header-text">
@@ -122,14 +126,18 @@
                         <a href="https://www.linkedin.com/in/ismaelsedano"> <i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/Leams14"> <i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="assets/Ismael Sedano_CV.pdf" download class="download">Download CV</a>
-                </div>
+                    <a href="assets/Ismael Sedano_CV.pdf" download class="download">
+                        <span>Download CV</span>
+                    </a>
+            </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="10" placeholder="Type your message"></textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit">
+                        <span>Submit</span>
+                    </button>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -148,6 +156,7 @@
         sidemenu.style.right="-150px";
     }
 </script>
+
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzaIVL2cVUBEn70nY2vN46pzyX_qffwUMmFCzmwiQJ3LiqKXHSXfJpNEDx3A_FKhDll/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -165,6 +174,6 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-
+<script src="main.js"></script>
 </body>
 </html>
