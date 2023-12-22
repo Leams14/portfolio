@@ -300,7 +300,35 @@ body.light .social-icons a:hover{
     color:#fff;
 }
 
+/*-- 2.1.Tab-links --*/
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px 0;    
+}
 
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #FF8C20;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.2s;
+}
+
+.tab-links:hover::after{
+    width: 100%;
+}
 
 /* 3.____EXPERIENCE SECTION____ */
 
