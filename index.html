@@ -71,7 +71,20 @@
                             <abbr title="Python"><i class="fa-brands fa-python" style="color: #ffffff;"></i></abbr>
                             <abbr title="MySQL"><i class="fa-solid fa-database" style="color: #ffffff;"></i></abbr>
                         </ul>
-
+                    </div>
+                    <div class="tab-contents">
+                        <!--Certificate 1 / Responsive Web Design Certification-->>
+                        <a href="assets/responsive-web-design-certification.PNG" id="openCertificate">RESPONSIVE WEB DESIGN-CERTIFICATION</a>
+                        <div id="certificate1">
+                            <img src="" alt="image" id="certificate1-image">
+                        </div>
+                    
+                        <!--Certificate 2 / JavaScript Algorithms and Data Structures-->
+                        <a href="assets/JavaScript-algorithms-and-data-structures.PNG" id="openCertificate2">JAVASCRIPT ALGORITHMS AND DATA STRUCTURES-CERTIFICATION</a>
+                        <div id="certificate2">
+                            <img src="" alt="image2" id="certificate2-image">
+                        </div>
+                        
                     </div>
                 </div>
             </div>   
@@ -196,6 +209,37 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
 <script src="main.js"></script>
+
+<script>
+    // Agrega un script para manipular el comportamiento al hacer clic
+    document.getElementById('openCertificate').addEventListener('click', function(event) {
+      event.preventDefault();
+      var imageUrl = this.getAttribute('href');
+      document.getElementById('certificate1-image').setAttribute('src', imageUrl);
+      document.getElementById('certificate1').style.display = 'flex';
+    });
+
+    document.getElementById('certificate1').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  </script>
+
+<!--Script 2-->
+<script>
+    // Agrega un script para manipular el comportamiento al hacer clic
+    document.getElementById('openCertificate2').addEventListener('click', function(event) {
+      event.preventDefault();
+      var imageUrl = this.getAttribute('href');
+      document.getElementById('certificate2-image').setAttribute('src', imageUrl);
+      document.getElementById('certificate2').style.display = 'flex';
+    });
+
+    document.getElementById('certificate2').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>
