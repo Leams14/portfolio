@@ -57,34 +57,48 @@
                         I am an analytical person with the ability to assume new challenges.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Certifications</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <abbr title="HTML"><i class="fa-brands fa-html5" style="color: #ffffff;"></i></abbr>
-                            <abbr title="CSS"><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i></abbr>
-                            <abbr title="JavaScript"><i class="fa-brands fa-js" style="color: #ffffff;"></i></abbr>
-                            <abbr title="React"><i class="fa-brands fa-react" style="color: #ffffff;"></i></abbr>
-                            <abbr title="Sass"><i class="fa-brands fa-sass" style="color: #ffffff;"></i></abbr>
-                            <abbr title="Git"><i class="fa-brands fa-git" style="color: #ffffff;"></i></abbr>
-                            <abbr title="Python"><i class="fa-brands fa-python" style="color: #ffffff;"></i></abbr>
-                            <abbr title="MySQL"><i class="fa-solid fa-database" style="color: #ffffff;"></i></abbr>
+                            <abbr title="HTML"><i class="fa-brands fa-html5"></i></abbr>
+                            <abbr title="CSS"><i class="fa-brands fa-css3-alt"></i></abbr>
+                            <abbr title="JavaScript"><i class="fa-brands fa-js"></i></abbr>
+                            <abbr title="React"><i class="fa-brands fa-react"></i></abbr>
+                            <abbr title="Sass"><i class="fa-brands fa-sass"></i></abbr>
+                            <abbr title="Git"><i class="fa-brands fa-git"></i></abbr>
+                            <abbr title="Python"><i class="fa-brands fa-python"></i></abbr>
+                            <abbr title="MySQL"><i class="fa-solid fa-database"></i></abbr>
                         </ul>
                     </div>
-                    <div class="tab-contents">
-                        <!--Certificate 1 / Responsive Web Design Certification-->>
-                        <a href="assets/responsive-web-design-certification.PNG" id="openCertificate">RESPONSIVE WEB DESIGN-CERTIFICATION</a>
+                    <div class="tab-contents" id="certifications">
+                        <!--Certificate 1 / Responsive Web Design Certification-->
+                        <div class="certificate-link" id="certificate1-link">
+                            <i class="fa-regular fa-circle"></i>
+                            <a href="assets/responsive-web-design-certification.PNG" id="openCertificate1" class="certificate">RESPONSIVE WEB DESIGN CERTIFICATION</a>
+                        </div>
                         <div id="certificate1">
                             <img src="" alt="image" id="certificate1-image">
                         </div>
-                    
+                        <br></br>
                         <!--Certificate 2 / JavaScript Algorithms and Data Structures-->
-                        <a href="assets/JavaScript-algorithms-and-data-structures.PNG" id="openCertificate2">JAVASCRIPT ALGORITHMS AND DATA STRUCTURES-CERTIFICATION</a>
+                        <div class="certificate-link" id="certificate2-link">
+                            <i class="fa-regular fa-circle"></i>
+                            <a href="assets/JavaScript-algorithms-and-data-structures.PNG" id="openCertificate2" class="certificate">JAVASCRIPT ALGORITHMS AND DATA STRUCTURES CERTIFICATION</a>
+                        </div>
                         <div id="certificate2">
                             <img src="" alt="image2" id="certificate2-image">
                         </div>
-                        
+                        <br></br>
+                        <!--Certificate 3 / VBA in Excel for Reporting and Data Analysis Automation -->
+                        <div class="certificate-link" id="certificate3-link">
+                            <i class="fa-regular fa-circle"></i>
+                            <a href="assets/VBA-certification.PNG" id="openCertificate3" class="certificate">VBA FOR REPORTING AND DATA ANALYSIS AUTOMATION</a>
+                        </div>
+                        <div id="certificate3">
+                            <img src="" alt="image3" id="certificate3-image">
+                        </div>     
                     </div>
                 </div>
             </div>   
@@ -212,9 +226,10 @@
 
 <script src="main.js"></script>
 
+<!--Script 1-->
 <script>
-    // Agrega un script para manipular el comportamiento al hacer clic
-    document.getElementById('openCertificate').addEventListener('click', function(event) {
+    //Script to manage the behavior after makes click in 'Certificate1'
+    document.getElementById('openCertificate1').addEventListener('click', function(event) {
       event.preventDefault();
       var imageUrl = this.getAttribute('href');
       document.getElementById('certificate1-image').setAttribute('src', imageUrl);
@@ -228,7 +243,7 @@
 
 <!--Script 2-->
 <script>
-    // Agrega un script para manipular el comportamiento al hacer clic
+    // Script to manage the behavior after makes click in 'Certificate2'
     document.getElementById('openCertificate2').addEventListener('click', function(event) {
       event.preventDefault();
       var imageUrl = this.getAttribute('href');
@@ -240,6 +255,40 @@
       this.style.display = 'none';
     });
   </script>
+
+  <!--Script 3-->
+<script>
+    // Script to manage the behavior after makes click in 'Certificate3'
+    document.getElementById('openCertificate3').addEventListener('click', function(event) {
+      event.preventDefault();
+      var imageUrl = this.getAttribute('href');
+      document.getElementById('certificate3-image').setAttribute('src', imageUrl);
+      document.getElementById('certificate3').style.display = 'flex';
+    });
+
+    document.getElementById('certificate3').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  </script>
+
+<!--Script for .tab-contents class-->
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+</script>
 
 </body>
 </html>
