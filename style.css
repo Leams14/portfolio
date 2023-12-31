@@ -25,6 +25,7 @@
 -------------------------------------------------------------------- 
 */
 
+
 *{
     margin: 0;
     padding: 0;
@@ -235,6 +236,8 @@ body.light .social-icons a:hover{
     transform:translateY(-5px);  
   }
 
+
+
 /* 1.____HEADER-TEXT SECTION____ */
 
 .header-text{
@@ -260,6 +263,8 @@ body.light .social-icons a:hover{
     border-right: 5px solid  #FF8C20;
 }
 
+
+
 /* 2.____ABOUT-ME SECTION____ */
 
 #about-me{
@@ -267,22 +272,6 @@ body.light .social-icons a:hover{
     color: #FF8C20;
 }
 
-/* ---- TO BE CHECKED ----
-#about-me::after{
-    content: "";
-    width: 0;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    transition: 0.2s;
-}
-
-#about-me:hover::after{
-    width:100%;
-}
-*/
 .about-col-1 img{
     width: 500px;
     height: auto;
@@ -434,27 +423,36 @@ body.light .social-icons a:hover{
     max-width: 80%;
     max-height: 80%;
   }
+
+
+
 /* 3.____EXPERIENCE SECTION____ */
 
 #accordion{
-    margin: 30px 0px;
-    width: 600px;
+    margin: 30px auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #accordion li{
     list-style: none;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
+    background: #fff;
+    color:#080808;
     padding: 10px;
+    border-radius: 4px;
 }
 
 #accordion li label{
     padding: 10px; 
     display:flex;
-    align-items: center;  /*Posicionar a la izquierda*/
+    align-items: center;  
     justify-content: space-between;
     font-size: 18px;
-    font-weight: 500px;
+    font-weight: 500;
     cursor:pointer;
     color: #ff8c20;
 }
@@ -462,14 +460,64 @@ body.light .social-icons a:hover{
 #accordion li label span{
     font-size: 14px;
     color: #ff8c20;
-    transform: rotate(90deg);
+}
+
+#accordion li label span .date{
+    font-size: 14px;
+    color: #ff8c20;
+    font-weight:bold;
+    margin-right: 10px; 
 }
 
 #accordion li label i{
-    transform: rotate (90deg);
-    font-size: 15px;
-    color:#fff;
+    transform: rotate(90deg);
+    font-size: 14px;
+    color:#080808;
 }
+
+label h1{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.content h3{
+    font-size: 15px;
+    margin: 15px 0;
+    color:#FF8C20;
+    text-decoration:underline;
+}
+
+.content p{
+    font-size: 14px;
+    color:#080808;
+}
+
+.content p i{
+    font-size: 10px;
+    color:#ff8c20;
+    margin-right: 5px;
+}
+
+/* Hide the radio buttons*/
+#accordion label+input[type="radio"]{
+    display:none;
+}
+
+/* When hidden radio buttons are checked*/
+#accordion label+input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
+
+#accordion .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+
+
 /* 4.____PROJECTS SECTION____ */
 
 #projects{
@@ -833,4 +881,3 @@ nav .fa-solid{
         margin-right: 15px;
     }
 }
-
