@@ -72,7 +72,7 @@ nav ul li{
 nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     position: relative;
 }
 
@@ -155,7 +155,7 @@ body.light{
 body.light nav ul li a{
     color: #080808;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     position: relative;
     margin-bottom: 40px;
 }
@@ -211,6 +211,17 @@ body.light .certificate:hover {
     color: #080808;
 }
 
+/* experience section*/
+body.light #accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 3px;
+    background: #fff;
+    border: 2px solid  #080808;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 body.light #msg{
     color:#080808;
     margin-top: 15px;
@@ -251,7 +262,7 @@ body.light .social-icons a:hover{
 }
 
 .header-text h1 span{
-    color: orange;
+    color: #FF8C20;
 }
 
 .header-text img{    
@@ -428,8 +439,13 @@ body.light .social-icons a:hover{
 
 /* 3.____EXPERIENCE SECTION____ */
 
+#experience{
+    padding: 10px 0;
+    color: #FF8C20;
+}
+
 #accordion{
-    margin: 30px auto;
+    margin: 50px auto;
     width: 800px;
     display: flex;
     flex-direction: column;
@@ -611,6 +627,11 @@ label h1{
 
 /* 5.____CONTACT SECTION____ */
 
+#contact{
+    padding: 80px 0;
+    color: #ff9633;
+
+}
 
 /*-- 5.1.Left side section --*/
 
@@ -648,7 +669,8 @@ label h1{
 /*-- 5.2.Right side section --*/
 
 .contact-right{
-   flex-basis: 65%; 
+   flex-basis: 65%;
+   margin-top: 65px; 
 }
 
 .contact-right form{
