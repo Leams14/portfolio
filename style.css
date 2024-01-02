@@ -83,7 +83,7 @@ nav ul li a::after{
     content: "";
     width: 0;
     height: 2px;
-    background: #FF8C20;
+    background: #ff9633;
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -174,7 +174,7 @@ body.light nav ul li a::after{
     content: "";
     width: 0;
     height: 2px;
-    background: #FF8C20;
+    background: #ff9633;
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -262,7 +262,7 @@ body.light .social-icons a:hover{
 }
 
 .header-text h1 span{
-    color: #FF8C20;
+    color: #ff9633;
 }
 
 .header-text img{    
@@ -270,8 +270,8 @@ body.light .social-icons a:hover{
     height: auto;
     margin: -380px -50px 0 auto;
     float: right;
-    border-bottom: 5px solid  #FF8C20;
-    border-right: 5px solid  #FF8C20;
+    border-bottom: 5px solid  #ff9633;
+    border-right: 5px solid  #ff9633;
 }
 
 
@@ -280,7 +280,7 @@ body.light .social-icons a:hover{
 
 #about-me{
     padding: 80px 0;
-    color: #FF8C20;
+    color: #ff9633;
 }
 
 .about-col-1 img{
@@ -332,7 +332,7 @@ body.light .social-icons a:hover{
     content: "";
     width: 0;
     height: 2px;
-    background: #FF8C20;
+    background: #ff9633;
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -371,13 +371,14 @@ body.light .social-icons a:hover{
 }
 
 .certificate {
-    color: #ff8c20; 
+    color: #ff9633; 
     text-decoration: none;
     transition: color 0.3s; 
 }
 
 .tab-contents .fa-regular.fa-circle{
-    color:#fff
+    color:#fff;
+    margin-right: 20px;
 }
 
 .certificate:hover {
@@ -441,7 +442,7 @@ body.light .social-icons a:hover{
 
 #experience{
     padding: 10px 0;
-    color: #FF8C20;
+    color: #ff9633;
 }
 
 #accordion{
@@ -470,17 +471,17 @@ body.light .social-icons a:hover{
     font-size: 18px;
     font-weight: 500;
     cursor:pointer;
-    color: #ff8c20;
+    color: #ff9633;
 }
 
 #accordion li label span{
     font-size: 14px;
-    color: #ff8c20;
+    color: #ff9633;
 }
 
 #accordion li label span .date{
     font-size: 14px;
-    color: #ff8c20;
+    color: #ff9633;
     font-weight:bold;
     margin-right: 10px; 
 }
@@ -499,7 +500,7 @@ label h1{
 .content h3{
     font-size: 15px;
     margin: 15px 0;
-    color:#FF8C20;
+    color:#ff9633;
     text-decoration:underline;
 }
 
@@ -510,7 +511,7 @@ label h1{
 
 .content p i{
     font-size: 10px;
-    color:#ff8c20;
+    color:#ff9633;
     margin-right: 5px;
 }
 
@@ -649,13 +650,13 @@ label h1{
     text-decoration: none;
     font-size: 50px;
     margin-right: 30px;
-    color:#ff9633;
+    color:#fff;
     display: inline-block;
-    transition: transform 0.5s;
+    transition: transform 0.8s;
 }
 
 .social-icons a:hover{
-  color:#fff;
+  color: #ff9633;
   transform:translateY(-5px);  
 }
 
