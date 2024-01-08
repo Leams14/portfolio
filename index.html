@@ -170,7 +170,7 @@
 
                 <!--DXC TECHNOLOGY-->
                 <li>
-                    <label for="second">
+                    <label for="third">
                         <h1>DXC TECHNOLOGY</h1>
                         <span>
                             <span class="date">June 2017 - June 2018  </span>
@@ -178,7 +178,7 @@
                         </span>
                     </label>
 
-                    <input type="radio" name="accordion" id="second">
+                    <input type="radio" name="accordion" id="third">
                     <div class="content">
                         <h3>Accounts Payable and Reimbursement Process Specialist</h3>
                         <p> 
@@ -199,7 +199,7 @@
 
                 <!--ASPLEX SP. Z O.O.-->
                 <li>
-                    <label for="third">
+                    <label for="fourth">
                         <h1>ASPLEX SP. Z O.O.</h1>
                         <span>
                             <span class="date">January 2015 - April 2017  </span>
@@ -207,7 +207,7 @@
                         </span>
                     </label>
 
-                    <input type="radio" name="accordion" id="third">
+                    <input type="radio" name="accordion" id="fourth">
                     <div class="content">
                         <h3>Electronic Technician</h3>
                         <p> 
@@ -219,7 +219,7 @@
 
                 <!--A-NOVO COMLINK ESPAÑA-->
                 <li>
-                    <label for="fourth">
+                    <label for="fifth">
                         <h1>A-NOVO COMLINK ESPAÑA</h1>
                         <span>
                             <span class="date">July 2014 - January 2015  </span>
@@ -227,7 +227,7 @@
                         </span>
                     </label>
 
-                    <input type="radio" name="accordion" id="fourth">
+                    <input type="radio" name="accordion" id="fifth">
                     <div class="content">
                         <h3>Electronic Technician</h3>
                         <p> 
@@ -321,7 +321,7 @@
         <p>Copyright © All rights reserved. Made by Ismael Sedano Aguilera</p>
     </div>
 </div>
-
+<!-- Script for menu in small devices-->
 <script>
     var sidemenu = document.getElementById("sidemenu");
     function openmenu(){
@@ -332,6 +332,33 @@
     }
 </script>
 
+<!--Script to control the open/close of the accordion in EXPERIENCE Section-->
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+         
+        const labels = document.querySelectorAll('#accordion li label');
+
+        // Iterate with each label iteration and add an event to click each one.
+        labels.forEach(label => {
+            label.addEventListener('click', function () {
+                const input = this.parentElement.querySelector('input[type="radio"]');
+                const content = this.parentElement.querySelector('.content');
+
+                // If the input is selected, close .content section, else, open it
+                if (input.checked) {
+                    content.style.maxHeight = '0';
+                    input.checked = false;  
+                } else {
+                    content.style.maxHeight = '400px';
+                    input.checked = true; 
+                }
+            });
+        });
+    });
+</script>
+
+<!-- Script to form contact-->
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzaIVL2cVUBEn70nY2vN46pzyX_qffwUMmFCzmwiQJ3LiqKXHSXfJpNEDx3A_FKhDll/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -414,6 +441,8 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-</script> 
+</script>
+
+
 </body>
 </html>
