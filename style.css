@@ -310,6 +310,7 @@ body.light .social-icons a:hover{
 
 .about-col-2 p{
     color:#fff;
+    max-width: 700px;
 }
 
 /*-- 2.1.Tab-links --*/
