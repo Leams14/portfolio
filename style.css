@@ -222,6 +222,17 @@ body.light #accordion li{
     border-radius: 4px;
 }
 
+body.light #accordion li label{
+    padding: 10px; 
+    display:flex;
+    align-items: center;  
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    color: #080808;
+}
+
 body.light #msg{
     color:#080808;
     margin-top: 15px;
@@ -805,7 +816,6 @@ nav .fa-solid{
     nav .fa-solid{
         display: block;
         font-size: 25px;
-       
     }
 
     nav ul{
@@ -826,6 +836,7 @@ nav .fa-solid{
         display: block;
         margin: 15px;
         text-align: center;
+        margin-top: 20px;
     }
 
     /* Underline efect in full screens */
@@ -856,8 +867,7 @@ nav .fa-solid{
         position: absolute;
         top: 25px;
         left: 25px;
-        cursor: pointer;
-         
+        cursor: pointer;   
     }
 
     .subtitle{
