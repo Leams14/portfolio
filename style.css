@@ -331,9 +331,10 @@ body.light .social-icons a:hover{
 }
 
 .tab-links{
+    margin-top: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
