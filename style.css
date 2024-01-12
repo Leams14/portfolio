@@ -319,10 +319,15 @@ body.light .social-icons a:hover{
     font-weight: 600;
 }
 
-.about-col-2 p{
+.description{
     color:#fff;
     max-width: 700px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-bottom: 0.5px solid  #ff9633;
+    padding-bottom: 15px;
 }
+
 
 /*-- 2.1.Tab-links --*/
 .tab-titles{
@@ -331,7 +336,7 @@ body.light .social-icons a:hover{
 }
 
 .tab-links{
-    margin-top: 50px;
+    margin-top: -6px;
     margin-right: 50px;
     margin-bottom: 20px;
     font-size: 24px;
