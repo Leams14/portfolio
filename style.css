@@ -621,7 +621,7 @@ label h1{
 .information{
     font-size: 15px;
     margin-top: -15px;
-    padding-bottom: 7px;
+    padding-bottom: 10px;
 }
 
 .layer a{
@@ -816,20 +816,37 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px){
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
+    
+    .header-text {
+        position: relative;
     }
-
-    .header-text h1{
-        font-size: 40px;
-        margin-top: 80px;
+    
+    .header-text h1 {
+        position: relative;
+        font-size: 32px;
+        top: 0;
+        left: 0;
     }
-
+    
+    .header-text p {
+        position: relative;
+        font-size: 20px;
+        margin:-20px 0 20px 0;
+    }
+    
+    .header-text img {
+        position: relative;
+        top: 60px;
+        width: 500px;
+        height: auto;
+        margin-top: -130px;
+    }
+    
     nav .fa-solid{
         display: block;
         font-size: 25px;
     }
+
 
     nav ul{
         background: #ff9633;
@@ -903,10 +920,13 @@ nav .fa-solid{
         display: block; 
         max-width: 100%;
     }
+    
     .about-col-2{
         font-size:16px;
     }
-    .about-col-2 p{
+
+    .description{
+        max-width: 400px;
         margin-top: 15px;
         font-size:16px;
     }
