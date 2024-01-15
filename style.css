@@ -980,11 +980,19 @@ nav .fa-solid{
     .social-icons{
         display: flex;
         justify-content: center;
-        margin: 0;
+        margin-right: -100px;
     }
 
     .social-icons a {
-        margin-top: 15px;
+        margin-top: -35px;
         margin-right: 15px;
+    }
+
+    .download {
+        margin-left: 70px; 
+    }
+
+    .contact-right{
+        margin-top: -10px;
     }
 }
